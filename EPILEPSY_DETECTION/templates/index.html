@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload EDF File</title>
+    <style type="text/css">
+        /* Apply styles to the body */
+        body {
+            background-image: url(/static/bg.png);
+            background-attachment: fixed;
+            background-size: 2360px 1055px;
+        }
+        h1{
+            position: absolute;
+            top:120px ;
+            right: 880px;
+            font-size:50px;
+            color:#0d3d9e;
+            font-weight: bold;
+        }
+
+
+        /* Style the heading */
+        h2 {
+            position: absolute;
+            top:350px ;
+            right: 930px;
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+            font-size:37px;
+            text-transform: uppercase;
+        }
+        h3 {
+            position: absolute;
+            top:200px ;
+            right: 900px;
+            font-size:30px;
+            color:#2652a8;
+        }
+
+
+        /* Style the form container */
+        form {
+            position: absolute;
+            top:90px ;
+            right: 950px;
+            width: 400px;
+            height: 200px;
+            margin-top: 400px;
+            margin-left:250px;
+            padding: 100000 px;
+            background-color: #CCCCFF;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* Style the file input */
+        input[type="file"] {
+            display: block;
+            position:absolute;
+            bottom:100px;
+            left:100px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+
+        /* Style the submit button */
+        button[type="submit"] {
+          
+
+
+           position:absolute;
+           top:115px;
+           background-color: #007bff;
+           color: #fff;
+           border: none;
+           padding: 10px 35px;
+           border-radius: 4px;
+           cursor: pointer;
+           margin-left: 130px;
+           margin-bottom: 100px;
+        }
+
+
+        /* Hover effect for the submit button */
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Epilepsy Seizure Detection</h1>
+    <h3>Using Machine Learning</h3>
+    <br>
+
+
+    <h2>Upload Your EDF File</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".edf" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <style>
+        h1 {
+            font-style: oblique;
+            font-size:40px;
+            font-family:Georgia;
+            text-shadow: 1px 1px 2px;
+            font-weight: bold;
+            text-align: center;
+            color: #0d3d9e;
+            text-decoration: underline;
+            text-decoration-color: #7d7da8;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #CCCCFF;
+        }
+        h2 {
+            font-size:28px;
+            font-family:Georgia;
+            text-shadow: 1px 1px 2px;
+            text-align: center;
+            color: #2652a8;
+        }
+        p {
+            font-family:monospace,monaco;
+            font-weight: none;
+            font-size:20px;
+            text-align: center;
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <br>
+    <div>
+        
+            <p>Number of Seizures:  {{ num_seizures }}</p>
+            <br>
+            <p>Number of Non-Seizures:  {{ num_non_seizures }}</p>
+            <br>
+            <p>You have selected the channel number :   {{ channel_indexx }} </p>
+            <br>
+        <br>
+        <h2>Your EDF File</h2>
+        <img src="data:image/png;base64,{{ raw_plot_base64 }}" alt="Raw plot of your EDF file">
+        <h2>Plot of seizure for given time interval</h2>
+        <img src="data:image/png;base64,{{ prediction_plot_base64 }}" alt="Prediction plot">
+    </div>
+</body>
+</html>
+
+
